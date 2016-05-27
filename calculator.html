@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>SFU | Ivan Wong</title>
+
+	<!-- Makes browsers render all elements more consistently and in line with modern standards -->
+	<link rel="stylesheet" href="stylesheet/normalize.css">
+	<link rel="stylesheet" href="stylesheet/calculator.css">
+	<!--<link rel="stylesheet" media="only screen and (color)" href="calculator.css" />-->
+	<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins"> -->
+	<!-- Removes horizontal scrolling -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<section id="navbar">
+		<div class="wrapper">
+			<header>
+					<nav>
+						<a href="#"> ABOUT </a>
+						<a href="#"> CONTACT US </a>
+					</nav>
+				</header>
+
+			<!-- NBA  -->
+			<div class="content">
+				<h1 class="title">SFU</h1>
+			</div>
+		</div>
+
+		<img src="image/arrows_down.png" alt="see more" class="see_more">
+	</section>
+
+	<section id="SFUGradeCalculator">
+		<h1 id="GradeCalculatorTitle"> GRADE CALCULATOR </h1>
+		<div class="WhiteBox">
+			<div class="RedBoxBottom"></div>
+			<div class="RedBoxTop"></div>
+			<p id="GradeCalcText">Grade Calculator</p>
+			<div class="BlueBox">
+				<p id="Activities">Activities</p>
+				<p id="GradeText">Give grades to the numeric activites:</p>
+
+				<table align="center" class="InnerTable">
+					<tr>
+						<th>Name</th>
+						<th>Short Name</th>
+						<th>Grade</th>
+						<th>Percentage</th>
+					</tr>
+
+					<tr>
+        			<td>Activity 1</td>
+       				<td>A1</td>
+        			<td>
+        				<input type="text" class="GradeCorrectBox" name="A1Correct" id="A1Correct" oninput="ActivityPercent('A1Correct','A1Total','A1Percentage')"/>
+        				<span style="vertical-align: text-top; font-size: 20px">/</span>
+        			 	<input type="text" class="GradeTotalBox" name="A1Total" id="A1Total" oninput="ActivityPercent('A1Correct','A1Total','A1Percentage')"/> </td>
+        				<td id="A1Percentage"></td>
+					<tr>
+
+					<tr>
+        			<td>Activity 2</td>
+       				<td>A2</td>
+        			<td>
+        				<input type="text" class="GradeCorrectBox" name="A2Correct" id="A2Correct" oninput="ActivityPercent('A2Correct','A2Total','A2Percentage')"/>
+        				<span style="vertical-align: text-top; font-size: 20px">/</span>
+        			 	<input type="text" class="GradeTotalBox" name="A2Total" id="A2Total" oninput="ActivityPercent('A2Correct','A2Total','A2Percentage')"/> </td>
+        				<td id="A2Percentage"></td>
+					<tr>
+
+					<tr>
+        			<td>Activity 3</td>
+       				<td>A3</td>
+        			<td>
+        				<input type="text" class="GradeCorrectBox" name="A3Correct" id="A3Correct" oninput="ActivityPercent('A3Correct','A3Total','A3Percentage')"/>
+        				<span style="vertical-align: text-top; font-size: 20px">/</span>
+        			 	<input type="text" class="GradeTotalBox" name="A3Total" id="A3Total" oninput="ActivityPercent('A3Correct','A3Total','A3Percentage')"/> </td>
+        				<td id="A3Percentage"></td>
+					<tr>
+
+					<tr>
+        			<td>Activity 4</td>
+       				<td>A4</td>
+        			<td>
+        				<input type="text" class="GradeCorrectBox" name="A4Correct" id="A4Correct" oninput="ActivityPercent('A4Correct','A4Total','A4Percentage')"/>
+        				<span style="vertical-align: text-top; font-size: 20px">/</span>
+        			 	<input type="text" class="GradeTotalBox" name="A4Total" id="A4Total" oninput="ActivityPercent('A4Correct','A4Total','A4Percentage')"/> </td>
+        				<td id="A4Percentage"></td>
+					<tr>
+
+					<tr>
+						<td id="TotalRow"><b>TOTAL</b></td>
+						<td></td>
+						<td></td>
+						<td><b><span id="AvgMeanPercentage"></span></b></td>
+					</tr>
+				</table>
+
+				<div class="AverageBox"><a href="javascript:void(0);" onclick="AvgCalc()">AVERAGE</a></div>
+				<div class="MeanBox"><a href="javascript:void(0);" onclick="MeanCalc()">MEAN</a></div>
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="calculate.js"></script>
+	</section>
+
+	<section id="NormalCalculator">
+		<h1 id="NormalCalculatorTitle">SIMPLE CALCULATOR</h1>
+		<div id="CalculatorContainer">
+			<form name="calculator">
+				<input type="text" name="answer" class="NormText"/>
+				<br />
+
+				<input type="button" class="NormButton" value=" 1 "  onclick="calculator.answer.value += '1'" />
+				<input type="button" class="NormButton" value=" 2 " onclick="calculator.answer.value += '2'" />
+				<input type="button" class="NormButton" value=" 3 " onclick="calculator.answer.value += '3'" />
+				<input type="button" class="NormButton" value=" + " onclick="calculator.answer.value += '+'" style="color: #A1B9B3" />
+				<br />
+				
+				<input type="button" class="NormButton" value=" 4 " onclick="calculator.answer.value += '4'" />
+				<input type="button" class="NormButton" value=" 5 " onclick="calculator.answer.value += '5'" />
+				<input type="button" class="NormButton" value=" 6 " onclick="calculator.answer.value += '6'" />
+				<input type="button" class="NormButton" value=" - " onclick="calculator.answer.value += '-'" style="color: #A1B9B3"/>
+				<br />
+
+				<input type="button" class="NormButton" value=" 7 " onclick="calculator.answer.value += '7'" />
+				<input type="button" class="NormButton" value=" 8 " onclick="calculator.answer.value += '8'" />
+				<input type="button" class="NormButton" value=" 9 " onclick="calculator.answer.value += '9'" />
+				<input type="button" class="NormButton" value=" X " onclick="calculator.answer.value += '*'" style="color: #A1B9B3"/>
+				<br />
+
+				<input type="button" class="NormButton" value=" C " onclick="calculator.answer.value = ''" style="color: orange"/>
+				<input type="button" class="NormButton" value=" 0 " onclick="calculator.answer.value += '0'" />
+				<input type="button" class="NormButton" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" style="color: hotpink"/>
+				<input type="button" class="NormButton" value=" / " onclick="calculator.answer.value += '/'" style="color: #A1B9B3 "/>
+				<br />
+			</form>
+		</div>
+	</section>
+</body>
+</html>

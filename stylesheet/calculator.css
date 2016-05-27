@@ -1,0 +1,356 @@
+/*-------------------------Global Styles----------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+body {
+	font-family: "Poppins", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color: #A7192F;
+}
+
+.wrapper {
+	width: 1440px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+/*-------------------------Title Styles----------------------------*/
+
+#navbar {
+	background-image: url(../image/desk.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-position: center;
+	/*overflow: scroll;*/
+}
+
+header{
+	color: #FFFFFF;
+	padding: 2rem 0;
+}
+
+#logo {
+		color: #FFFFFF;
+		font-weight: 700;
+		font-size: 1.35rem;
+		float: left;
+		margin: 0;
+}
+
+span {
+	font-weight: 400;
+}
+
+nav {
+	float: right;
+}
+
+a{
+	color: #FFFFFF;
+	font-weight: 700;
+	text-decoration: underline;
+	border-bottom: 1px solid #000;
+	padding-bottom: 3px;
+	margin-left: 2rem;
+}
+
+.content {
+	padding: 2rem 0 6rem 0;
+}
+
+.title {
+	color: #F2F0F2;
+	text-align: center;
+	font-size: 6rem;
+	line-height: 5.5;
+	margin: 0;
+
+}
+
+.see_more {
+	position: absolute;
+	left: 50%;
+	margin-left: -13px;
+	bottom: 87px;
+	cursor: pointer;
+}
+
+
+/*-------------------------SFU Styles----------------------------*/
+
+tr {
+	width: 50%;
+}
+
+tr:hover{
+	background-color: rgb(95%,95%,95%);
+}
+
+table, th, td{
+	border: 1px solid #A9A9A9;
+	border-collapse: collapse;
+}
+
+th{
+	padding-top: 0.5em;
+	text-align: left;
+	padding-left: 0.5em;
+	padding-bottom: 0.5em;
+}
+td {
+	width: 30%;
+	padding-left: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+
+th {
+	font-weight: bold;
+	background-color: #DDDDDD;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+	margin: auto;
+}
+
+.InnerTable {
+	border: 1;
+	width: 97.5%;
+	padding-top: 10px;
+	font-size: 15px;
+	table-layout: fixed;
+	/*overflow: hidden;*/
+	position: relative;
+	top: 80px;
+	margin: 0 auto;
+}
+
+.GradeCorrectBox, .GradeTotalBox {
+	width: 70px;
+	padding-bottom: 10px;
+}
+
+#TotalRow{
+	line-height: 28.5px;
+}
+
+#GradeCalculatorTitle {
+	position: relative;
+	top: 56px;
+	font-size: 50px;
+	font-weight: bold; 
+	width: 50%;
+	margin: 0 auto;
+	left: 50px;
+	color: #FF8C94;
+
+}
+
+/*------------------------------Blue Box Style------------------------------*/
+
+.BlueBox {
+	/*height: 500px;*/
+	height: 75%;
+	width: 975px;
+	background-color: #E7EFF1;
+	position: absolute;
+	margin: 30px;
+	bottom: 10px;	
+}
+
+#Activities {
+	position: relative;
+	font-weight: bold;
+	font-size: 20px;
+	color: #A7192F;
+	margin: 12px;
+	top: 35px;
+}
+
+#GradeText{
+	position: relative;
+	margin: 12px;
+	top: 55px;
+}
+
+#GradeCalcText{
+	font-weight: bold;
+	font-size: 25px;
+	margin: 30px;
+	position: relative;
+	top: 66px;
+}
+
+.AverageBox, .MeanBox{
+	border: 2px solid #A7192F;
+	text-align: center;
+  	text-indent: -32px;
+  	position: relative;
+  	margin: 90px;
+  	font-weight: bold;
+  	color: white;
+  	background-color: #A7192F;
+  	border-radius: 5px;
+  	top: 40px;
+  	width: 94px;
+  	float: left;
+  	
+}
+
+.AverageBox{
+  	height: 40px;
+  	left: 650px;
+  	padding: 7px;
+}
+
+.AverageBox:hover, .MeanBox:Hover {
+	box-shadow: inset 0 0 1em gold;
+	box-shadow: 0 0 1em red;
+}
+
+.MeanBox{
+  	height: 40px;
+  	left: 500px;
+  	padding: 7px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a.hover {
+	color: red;
+	position: relative;
+}
+
+/*------------------------------Red Box Style------------------------------*/
+
+.RedBoxTop, .RedBoxBottom{
+	border: 1px solid #A7192F;
+	width: 100%;
+	position: absolute;
+	/*left: 60px;*/
+	height: 2.2em;
+	background-color: #A7192F;
+}
+
+.RedBoxTop{
+	top: 0%;
+}
+
+.RedBoxBottom{
+	top: 95.5%;
+}	
+
+/*------------------------------White Box Style------------------------------*/
+
+.WhiteBox {
+    height: 100%;
+  	box-shadow:0px 0px 10px black;
+  	width: 90%;
+  	position:absolute;
+  	min-width: 700px;
+  	background-color: white;
+  	left: 60px;
+  	top: 130%;
+
+}
+
+/*------------------------------Calculator Style------------------------------*/
+
+#NormalCalculatorTitle {
+	position: relative;
+	width: 50%;
+	margin: 0 auto;
+	top: 895px;
+	color: white;
+	font-weight: bold;
+	left: 50px;
+	font-size: 50px;
+	color: #FF8C94;
+}
+
+#CalculatorContainer {
+	position: relative;
+	width: 50%;
+	border: none;
+	border-radius: 5px;
+	top: 950px;
+	margin: 0 auto;
+}
+
+.NormButton {
+	background-color: white;
+	width: 25.17%;
+	height: 70px;
+	font-size: 20px;
+	font-weight: 900;
+	margin: -2.9px;
+	color: #696866;	
+	bottom: 25.2px;
+	border: none;
+	position: relative;
+	left: 3px;
+}
+
+.NormButton:hover{
+	color: #AD667B;
+	background-color: #faebd7;
+}
+
+.NormText {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 5px auto;
+	font-size: 65px;
+	height: 80px;
+	background-color: #1BCEFF;
+	border: none;
+	bottom: 5px;
+	color: white;
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
